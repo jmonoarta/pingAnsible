@@ -4,5 +4,5 @@
   
   tasks:
   - name: Check hostname
-    shell: whoami && hostname
+    shell: whoami && hostname > test.txt
  
