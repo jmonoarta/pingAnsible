@@ -4,6 +4,5 @@
   
   tasks:
   - name: Check hostname
-    shell:  echo "Hostname: " | tr -d "\n" && uname -a | cut -d ' ' -f 2 | tr -d "\n" && echo " OS: " | tr -d "\n" && uname -a  | cut -d ' ' -f 1
-    
+    shell:   echo "Hostname: " | tr -d "\n" && uname -a | cut -d ' ' -f 2 | tr -d "\n"    
  
