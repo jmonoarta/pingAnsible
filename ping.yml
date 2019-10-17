@@ -7,7 +7,7 @@
     shell: echo "Hostname= " | tr -d "\n" | hostname && echo " OS= " | tr -d "\n" && uname -a  | cut -d ' ' -f 1
     register: result
   - local_action:
-      module: copy
-      content: {{ result }}
-      dest: ~
+      module= copy
+      content= {{ result }}
+      dest= ~
  
