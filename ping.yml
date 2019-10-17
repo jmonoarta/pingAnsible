@@ -4,5 +4,5 @@
   
   tasks:
   - name: Check hostname
-    shell: echo "Hostname= " | tr -d "\n" | hostname   
+    shell: echo "Hostname= " | tr -d "\n" | hostname && echo " OS= " | tr -d "\n" && uname -a  | cut -d ' ' -f 1  
  
