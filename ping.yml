@@ -1,6 +1,8 @@
-- name: test ping server
+- name: Check compability with shell script
   hosts: all
+  gather_facts: yes
   
   tasks:
-  - ping:
+  - name: Check hostname
+    shell: whoami && hostname
  
