@@ -7,6 +7,6 @@
     shell: echo "Hostname= " | tr -d "\n" | hostname && echo " OS= " | tr -d "\n" && uname -a  | cut -d ' ' -f 1
     register: result
   - copy: 
-      content: "{{ result}}"
+      content: "{{ result.stdout }}"
       dest: /home/jmanoarta/test.txt
  
