@@ -6,6 +6,7 @@
   - name: Check hostname
     shell: echo "Hostname= " | tr -d "\n" | hostname | tr -d "\n"  && echo " OS= " | tr -d "\n" && uname -a  | cut -d ' ' -f 1
     register: result
+  - debug: var=result  
   - copy: 
       content: "{{ result.stdout }}"
       dest: /home/jmanoarta/test.txt
